@@ -79,6 +79,18 @@ describe("insert", function () {
 
   //insert to full tree, largest (most right)
   it("inserts node larger than current largest at far right (small)", function () {
+
+     /**
+   *            root
+   *              |
+   *              v
+   *              10
+   *                \
+   *                  20
+   *                    \
+   *                      21
+   */
+
     smallBST.insert(21);
     expect(smallBST.root.right.val).toEqual(20);
     expect(smallBST.root.right.right.val).toEqual(21);
